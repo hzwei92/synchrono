@@ -3,7 +3,7 @@ import Modal from '@mui/material/Modal';
 import Card from '@mui/material/Card';
 import Login from './Login';
 import { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../app/page';
+import { AuthContext } from './AuthContext';
 
 export default function WelcomeModal() {
   const { userId, accessToken, deviceId } = useContext(AuthContext);

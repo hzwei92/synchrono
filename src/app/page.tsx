@@ -24,8 +24,10 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Rooms from "@/components/Rooms";
 import Messages from "@/components/Messages";
+import { LiveKitContext } from "@/components/LiveKitContext";
+import { MatrixContext, spaceId } from "@/components/MatrixContext";
+import { AuthContext } from "@/components/AuthContext";
 
-const spaceId = "!KTwhpffdswBcoBdIoj:matrix.org";
 
 const drawerWidth = 300;
 
@@ -62,30 +64,6 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
   },
-});
-
-export const LiveKitContext = createContext({
-  token: '',
-  setToken: ((token: string) => {}) as Dispatch<SetStateAction<string>>,
-  liveRoomId: undefined as MutableRefObject<string | null> | undefined,
-})
-
-export const MatrixContext = createContext({
-  client: (undefined as MutableRefObject<matrix.MatrixClient | null> | undefined),
-  rooms: {} as Record<string, {latitude: number, longitude: number, name: string}>,
-  setRooms: ((rooms: any) => {}) as Dispatch<SetStateAction<Record<string, {latitude: number, longitude: number, name: string}>>>,
-  myRooms: [] as matrix.Room[],
-  setMyRooms: ((rooms: matrix.Room[]) => {}) as Dispatch<SetStateAction<matrix.Room[]>>,
-  spaceId,
-})
-
-export const AuthContext = createContext({
-  userId: (undefined as string | null | undefined),
-  accessToken: (undefined as string | null | undefined),
-  deviceId: (undefined as string | null | undefined),
-  setUserId: (userId: string | null) => {},
-  setAccessToken: (accessToken: string | null) => {},
-  setDeviceId: (deviceId: string | null) => {},
 });
 
 export default function Home() {

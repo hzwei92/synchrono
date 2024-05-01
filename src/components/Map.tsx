@@ -2,13 +2,15 @@
 "use client";
 
 import { useContext, useEffect, useRef, useState } from "react";
-import { AuthContext, LiveKitContext, MatrixContext } from "../app/page";
 import { createRoot } from "react-dom/client";
 import mapboxgl, { GeoJSONSource, MapMouseEvent } from 'mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 mapboxgl.accessToken = 'pk.eyJ1Ijoid2VpaHoiLCJhIjoiY2xlNjVuaWI1MDJjcjNybXJsbGo4bXgyMiJ9.w_9vD530_V81gcdS-yZOLw';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import CreateRoom from "./CreateRoom";
 import Call from "./Call";
+import { LiveKitContext } from "./LiveKitContext";
+import { MatrixContext } from "./MatrixContext";
+import { AuthContext } from "./AuthContext";
 
 export default function Map() {
   const { client, rooms, setRooms, spaceId } = useContext(MatrixContext);

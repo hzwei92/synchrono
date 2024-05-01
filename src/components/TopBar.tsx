@@ -12,8 +12,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Dispatch, SetStateAction, useContext, useState } from 'react';
-import { AuthContext } from '@/app/page';
 import { styled } from '@mui/material';
+import { AuthContext } from './AuthContext';
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;

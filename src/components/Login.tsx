@@ -2,8 +2,9 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { useContext, useState } from 'react';
-import { AuthContext, MatrixContext } from '../app/page';
 import * as matrix from 'matrix-js-sdk';
+import { MatrixContext } from './MatrixContext';
+import { AuthContext } from './AuthContext';
 
 export default function Login() {
   const { client, setRooms, spaceId } = useContext(MatrixContext);
