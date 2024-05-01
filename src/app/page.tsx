@@ -58,7 +58,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
-export const darkTheme = createTheme({
+const darkTheme = createTheme({
   palette: {
     mode: 'dark',
   },

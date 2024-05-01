@@ -6,9 +6,11 @@ interface MessagesProps {
 }
 
 export default function Messages({ room }: MessagesProps) {
+  const events = room?.getLiveTimeline().getEvents();
   if (!room) return null;
   return (
     <Box>
+      
     </Box>
   )
 }
